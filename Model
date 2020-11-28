@@ -1,0 +1,18 @@
+# Deep-Learning-Project
+Deep learning project for Credicxo
+from keras.models import Sequential
+from keras.layers import Dense, Dropout
+modell=Sequential()
+# Adding the input layer
+modell.add(Dense(input_dim,kernel_initializer='uniform',activation='relu'))
+# Adding hidden layer
+modell.add(Dense(100,kernel_initializer='uniform',activation='relu'))
+# Adding output layer
+modell.add(Dense(1,kernel_initializer='uniform',activation='relu'))
+# Compling the model
+modell.compile(loss='binary_crossentropy',optimizer='SGD',metrics=['accuracy'])
+# Trainning the model with training data
+modell.fit(py.array(X_train),py.array(y_train),epochs=100,batch_size=2500,verbose=0)
+# Fitting the model for training and validation data
+modell.fit(py.array(X_train),py.array(y_train),validation_data=(py.array(X_test),py.array(y_test)),
+           epochs=100,batch_size=2500,verbose=0)
