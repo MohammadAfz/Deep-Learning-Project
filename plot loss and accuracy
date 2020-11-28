@@ -1,0 +1,30 @@
+# Deep-Learning-Project
+#Deep learning project for Creditxo
+import matplotlib.pyplot as plt 
+# Storing the history of the model in history 
+history=modell.fit(py.array(X_train),py.array(y_train),validation_data=(py.array(X_test),py.array(y_test)),epochs=100,
+                   batch_size=2500,verbose=0)
+# Ploting the graphs for accuracy and loss 
+
+
+fig = plt.figure(figsize=(20,10))
+plt.subplot(121)  
+plt.plot(history.history['accuracy'])  
+plt.plot(history.history['val_accuracy'])  
+plt.title('model accuracy')  
+plt.ylabel('accuracy')  
+plt.xlabel('epoch') 
+plt.legend(['train', 'test'], loc='upper left') 
+plt.ylim(0,1)
+
+# summarize history for loss  
+plt.subplots_adjust(right=0.9,wspace=0.2)   
+plt.subplot(122)  
+plt.plot(history.history['loss'])  
+plt.plot(history.history['val_loss'])  
+plt.title('model loss')  
+plt.ylabel('loss')  
+plt.xlabel('epoch')  
+plt.legend(['train', 'test'], loc='upper right') 
+
+plt.show()
