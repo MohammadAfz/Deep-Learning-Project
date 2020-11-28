@@ -1,2 +1,2 @@
 # Deep-Learning-Project
-Deep learning project for Creditxo
+Deep learning project for Credicxo
