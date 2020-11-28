@@ -1,0 +1,8 @@
+# Deep-Learning-Project
+#Deep learning project for Creditxo
+# Importing necessary llibraries
+
+import pandas as pd
+import numpy as py
+
+data=pd.read_csv('musk_csv.csv')
