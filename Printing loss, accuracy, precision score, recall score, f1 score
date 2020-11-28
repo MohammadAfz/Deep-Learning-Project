@@ -1,0 +1,20 @@
+# Deep-Learning-Project
+#Deep learning project for Creditxo
+# evaluate the model
+met_train= modell.evaluate(X_train, y_train, verbose=0)
+met_test= modell.evaluate(X_test, y_test, verbose=0)
+print("train loss= %0.2f,train accuracy=%0.2f"%(met_train[0],100*float(met_train[1])))
+print("test loss = %0.2f,test accuracy=%0.2f "%(met_test[0],100*float(met_test[1])))
+from sklearn.metrics import precision_score
+from sklearn.metrics import recall_score
+from sklearn.metrics import f1_score
+yhat_classes = modell.predict_classes(X_test, verbose=0)
+# precision tp / (tp + fp)
+precision = precision_score(y_test, yhat_classes)
+print('Precision: %f' % precision)
+# recall: tp / (tp + fn)
+recall = recall_score(y_test, yhat_classes)
+print('Recall: %f' % recall)
+# f1: 2 tp / (2 tp + fp + fn)
+f1 = f1_score(y_test, yhat_classes)
+print('F1 score: %f' % f1)
