@@ -1,0 +1,5 @@
+# Deep-Learning-Project
+Deep learning project for Creditxo
+data=data.drop(['ID','molecule_name','conformation_name'],axis=1)
+from sklearn.utils import shuffle
+data = shuffle(data)
